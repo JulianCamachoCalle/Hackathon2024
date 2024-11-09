@@ -36,19 +36,19 @@
     </div>
 
     <div class="row">
-      <div
-        class="col-12 col-md-6 col-lg-4 mb-3"
-        *ngFor="let noticia of filteredNoticias"
-      >
-        <div class="card shadow-sm hover-shadow">
-          <img src="../../../assets/img/{{ noticia.imagen }}" class="card-img-top" alt="Noticia" />
-          <div class="card-body">
-            <h5 class="card-title">{{ noticia.titulo }}</h5>
-            <p class="card-text">{{ noticia.resumen }}</p>
-            <a href="#" class="btn btn-outline-primary">Leer más</a>
+        <div
+          class="col-12 col-md-6 col-lg-4 mb-3"
+          *ngFor="let noticia of filteredNoticias"
+        >
+          <div class="card shadow-sm hover-shadow">
+            <img src="assets/img/{{ noticia.imagen }}" class="card-img-top" alt="Noticia" />
+            <div class="card-body">
+              <h5 class="card-title">{{ noticia.titulo }}</h5>
+              <p class="card-text">{{ noticia.resumen }}</p>
+              <a href="#" class="btn btn-outline-primary">Leer más</a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>      
   </div>
 </div>

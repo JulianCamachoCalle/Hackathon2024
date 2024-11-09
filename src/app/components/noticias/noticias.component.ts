@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';  // Asegúrate de importar CommonModule
 
 @Component({
   selector: 'app-noticias',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],  // Agrega CommonModule aquí
   templateUrl: './noticias.component.html',
   styleUrls: ['./noticias.component.css'],
 })
@@ -58,6 +59,7 @@ export class NoticiasComponent {
   ];
 
   filteredNoticias = this.noticias;
+  
   filterNoticias() {
     this.filteredNoticias = this.noticias.filter((noticia) => {
       const matchesSearchText =
@@ -70,6 +72,7 @@ export class NoticiasComponent {
       return matchesSearchText && matchesDistrict;
     });
   }
+
   ngOnChanges() {
     this.filterNoticias();
   }
