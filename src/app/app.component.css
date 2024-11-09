@@ -1,0 +1,141 @@
+/***  NAV DE LOGO Y MENU **/
+
+.navegaciones {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .enlace {
+    position: absolute;
+    padding: 22px 28px;
+  }
+  
+  .logo {
+    height: 36px;
+  }
+  
+  .navegaciones ul {
+    float: right;
+    margin-right: 12px;
+  }
+  
+  .navegaciones ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  
+  .navegaciones ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    padding: 8px 3px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .navegaciones li > .submenu {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    display: block;
+  }
+  
+  li a.active,
+  li a:hover {
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  
+  .navegaciones ul li a:hover {
+    color: #862510;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  ul li a.contact {
+    background: #862510;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  ul li a.contact:hover {
+    background: #c29f04;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  a.contact {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 952px) {
+    .enlace {
+      padding-left: 20px;
+    }
+    .navegaciones ul li a {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 842px) {
+    .logo {
+      height: 27px;
+    }
+  }
+  
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(0, 0, 0);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    .navegaciones ul li {
+      display: block;
+      margin: 20px 0;
+      line-height: 30px;
+    }
+    .navegaciones ul li a {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    li a:hover,
+    li a.active {
+      background: none;
+      color: black;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+  
+  /*** FIN NAV DE LOGO Y MENU **/
+  
