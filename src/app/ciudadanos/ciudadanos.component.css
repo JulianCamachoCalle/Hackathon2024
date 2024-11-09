@@ -1,0 +1,37 @@
+::view-transition-new(root){
+    animation: ciudadanos 3s ease 0s 1 normal forwards;
+}
+@keyframes ciudadanos {
+	from {
+		transform: scale(0.5);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+/* Contenedor principal con margen para la barra lateral */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+
+
+.logo-container {
+    padding: 10px;
+}
+
+.logo-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Título */
+h1 {
+    color: #000000;
+    align-items: center;
+}
