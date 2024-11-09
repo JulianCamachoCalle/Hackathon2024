@@ -1,0 +1,54 @@
+<div class="row m-1">
+  <div class="col-md-4 mb-4">
+    <div class="filters-container">
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Buscar noticia por nombre"
+        [(ngModel)]="searchText"
+        (ngModelChange)="filterNoticias()"
+      />
+
+      <select
+        class="form-control mb-3"
+        [(ngModel)]="selectedDistrict"
+        (ngModelChange)="filterNoticias()"
+      >
+        <option value="">Filtrar por distrito</option>
+        <option value="Distrito1">Distrito 1</option>
+        <option value="Distrito2">Distrito 2</option>
+        <option value="Distrito3">Distrito 3</option>
+        <option value="Distrito4">Distrito 4</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="card mb-4">
+      <img src="../../../assets/img/logo.jpg" class="card-img-top" alt="Noticia principal" />
+      <div class="card-body">
+        <h3 class="card-title">Título de la noticia principal</h3>
+        <p class="card-text">
+          Resumen de la noticia principal, con detalles relevantes...
+        </p>
+        <a href="#" class="btn btn-primary">Leer más</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-12 col-md-6 col-lg-4 mb-3"
+        *ngFor="let noticia of filteredNoticias"
+      >
+        <div class="card shadow-sm hover-shadow">
+          <img src="../../../assets/img/{{ noticia.imagen }}" class="card-img-top" alt="Noticia" />
+          <div class="card-body">
+            <h5 class="card-title">{{ noticia.titulo }}</h5>
+            <p class="card-text">{{ noticia.resumen }}</p>
+            <a href="#" class="btn btn-outline-primary">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
