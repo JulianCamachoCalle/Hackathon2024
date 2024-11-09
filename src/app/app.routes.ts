@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { CiudadanosComponent } from './components/ciudadanos/ciudadanos.component';
-import { InvestigadoresComponent } from './investigadores/investigadores.component';
-import { AutoridadesComponent } from './autoridades/autoridades.component';
+import { InvestigadoresComponent } from './components/investigadores/investigadores.component';
+import { AutoridadesComponent } from './components/autoridades/autoridades.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 export const routes: Routes = [
