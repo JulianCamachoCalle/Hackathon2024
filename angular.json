@@ -25,9 +25,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,6 +98,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
+    "analytics": false
+=======
     "analytics": "b5f7f8b3-73f4-4aab-931e-ebfe868f42f5"
+>>>>>>> 6a5a0df101ec6d57098160d6673eff2f7db9e845
   }
 }

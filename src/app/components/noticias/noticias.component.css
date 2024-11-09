@@ -1,0 +1,61 @@
+.filters-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 350px;
+  object-fit: cover;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: #862510;
+  border-color: #862510;
+}
+
+.btn-primary:hover {
+  background-color: #c29f04;
+  border-color: #c29f04;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.select-control {
+  max-width: 300px;
+}
+
+.card.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.hover-shadow:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    margin-bottom: 20px;
+  }
+
+  .col-md-4 {
+    width: 100%;
+  }
+
+  .col-md-8 {
+    width: 100%;
+  }
+}
