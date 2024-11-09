@@ -38,6 +38,8 @@
   height: auto;
 }
 
+
+
 /* Responsive design para pantallas pequeñas */
 @media (max-width: 768px) {
 .main-content {
