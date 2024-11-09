@@ -1,21 +1,26 @@
 <!-- Bootstrap CSS y JS -->
 <header>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</header>
 
 <!-- Botón de menú hamburguesa en la barra superior -->
 <nav class="navbar bg-body-tertiary navegaciones">
   <div class="container-fluid">
-    <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+    <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
+      aria-controls="offcanvasSidebar">
       &#9776; <!-- Ícono de hamburguesa -->
     </button>
-    
+
   </div>
 </nav>
 
 <!-- Barra lateral Offcanvas -->
-<div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+<div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="offcanvasSidebar"
+  aria-labelledby="offcanvasSidebarLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
@@ -27,11 +32,30 @@
     <p class="text-center">Mejor informados, más seguros</p>
     <!-- Enlaces de navegación -->
     <nav class="nav flex-column">
-      <a routerLink="ciudadanos" class="nav-link">Ciudadanos</a>
-      <a routerLink="investigadores" class="nav-link">Investigadores</a>
-      <a routerLink="autoridades" class="nav-link">Autoridades</a>
-      <a routerLink="noticias" class="nav-link">Noticias</a>
-      <a href="#tutorial" class="nav-link">Tutorial</a>
+      <li class="nav-item">
+        <a routerLink="ciudadanos" class="nav-link">Ciudadanos</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="investigadores" class="nav-link">Investigadores</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="autoridades" class="nav-link">Autoridades</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="noticias" class="nav-link">Noticias</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tutorial" class="nav-link">Tutorial</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="dashboard" class="nav-link">Dashboard</a>
+      </li>
+      <li *ngIf="!userLoginOn" class="nav-item">
+        <a routerLink="login" class="nav-link">Iniciar Sesión</a>
+      </li>
+      <li *ngIf="userLoginOn" class="nav-item">
+        <a class="nav-link">Cerrar Sesión</a>
+      </li>
     </nav>
   </div>
 </div>
