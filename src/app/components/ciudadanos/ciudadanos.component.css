@@ -1,37 +1,318 @@
-::view-transition-new(root){
-    animation: ciudadanos 3s ease 0s 1 normal forwards;
-}
-@keyframes ciudadanos {
-	from {
-		transform: scale(0.5);
-	}
-
-	to {
-		transform: scale(1);
-	}
-}
-
-/* Contenedor principal con margen para la barra lateral */
-.main-content {
-    margin-left: 220px;
-    padding: 20px;
-}
-
-
-
-.logo-container {
-    padding: 10px;
-}
-
-.logo-img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-/* Título */
 h1 {
-    color: #000000;
+  color: #000000;
+  align-items: center;
+}
+
+.carouselFondo2 {
+  background-image: url("/../assets/img/laptops.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  height: 750px;
+}
+
+.overlay2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(23, 35, 70, 0.52);
+  /* Color azul con 50% de opacidad */
+}
+
+.overlay2 h2 {
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  position: relative;
+  text-align: left;
+  margin-left: 70px;
+}
+
+@media screen and (max-width: 480px) {
+  .overlay2 h2 {
+    color: white;
+    font-size: 64px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    margin-left: 0px;
+  }
+}
+.overlay2 p {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  text-align: left;
+  margin-left: 82px;
+  margin-top: 23px;
+}
+
+.enlace2 {
+  text-decoration: none;
+  color: white;
+  text-align: left;
+  margin-left: 55px;
+  transition: text-shadow 0.3s ease;
+}
+
+.enlace2 h4 {
+  font-size: 22px;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.enlace2:hover {
+  text-decoration: none;
+  text-shadow: 0 0 20px white;
+  color: white;
+  text-align: left;
+  margin-left: 55px;
+}
+
+@media only screen and (max-width: 500px) {
+  .overlay2 p {
+    margin-left: 25px !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .enlace2.mision {
+    margin-left: -13% !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .enlace2.vision {
+    margin-left: -19px !important;
+  }
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  justify-items: center;
+  align-items: center;
+  margin-top: 180px;
+}
+
+@media only screen and (max-width: 500px) {
+  .mt-4 {
+    text-align: center !important;
+  }
+  .a {
+    text-align: justify !important;
+    padding: 18px 13px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mt-4.a {
+    padding: 18px 13px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .img-fluid {
+    margin-left: 0px !important;
+    max-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .custom-padding {
+    margin-top: 4% !important;
+    margin-left: 3% !important;
+    margin-right: 3% !important;
+    padding: 9px 21px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .col-md-6.order-md-1 {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 844px) {
+  .col-md-6.order-md-1 {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 1132px) {
+  .col-md-6.order-md-1 {
+    margin-left: 0 !important;
+  }
+}
+
+.custom_heading-container {
+  text-align: left;
+  margin-left: 6%;
+}
+.p-4:hover {
+  background: linear-gradient(
+    122deg,
+    rgba(67, 157, 223, 0.5),
+    rgba(182, 217, 255, 0.5)
+  );
+  transition: background 0.3s ease;
+  color: white;
+}
+
+.card_elemento {
+  position: relative;
+  overflow: hidden;
+}
+
+.card_elemento:hover .mensaje_hover {
+  opacity: 1;
+}
+
+.mensaje_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(22, 51, 77, 0.52); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+  border-radius: 50px;
+}
+
+.mensaje_hover p {
+  font-size: 15px;
+  color: white;
+  width: 80%;
+  margin: 5px 0; 
+}
+
+.conte-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.mt-4le {
+  background: linear-gradient(90deg, #000046 0%, #1cb5e0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.img_nosotros {
+  height: 350px;
+  width: 565px;
+  padding: 5px;
+}
+.img_nosotros:hover {
+  background: linear-gradient(90deg, #000046 0%, #1cb5e0 100%);
+}
+.texto_nosotros {
+  font-size: 18px;
+  text-align: justify;
+}
+
+@media (max-width: 400px) {
+  .conte-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+  }
+  .texto_nosotros {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .contenido__imagenes {
+    padding: 2px;
+    margin-top: 25px;
+  }
+
+  .contenido__imagenes > div {
+    margin-bottom: 10px; 
+  }
+}
+
+.img-labour-day {
+  margin-left: 33%;
+  max-width: 117%;
+}
+
+.custom-padding {
+  margin-left: 2%;
+  background: none;
+  transition: none;
+  color: black;
+  border-radius: 10px;
+  background-color: #283b85;
+  padding: 36px 43px;
+  height: auto;
+  margin-top: 26%;
+}
+
+.custom-heading {
+  font-size: 18px;
+  color: white;
+  padding: 5px;
+  font-weight: 100;
+}
+
+.custom-heading strong {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 700px) {
+  .img-labour-day {
+    margin-left: 0px !important;
+    max-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mt-4 {
+    text-align: center !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mt-4.a {
+    padding: 18px 13px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mt-4 {
+    text-align: center !important;
+  }
+  .a {
+    text-align: justify !important;
+    padding: 18px 13px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .img-labour-day {
+    margin-left: 0px !important;
+    max-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .custom-padding {
+    margin-top: 4% !important;
+    margin-left: 3% !important;
+    margin-right: 3% !important;
+    padding: 9px 21px !important;
+  }
 }
