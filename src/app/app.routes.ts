@@ -9,7 +9,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 export const routes: Routes = [
+    { path: '', component: InicioComponent },
     { path: 'noticias', component: NoticiasComponent },
     { path: 'ciudadanos', component: CiudadanosComponent },
     { path: 'investigadores', component: InvestigadoresComponent },
