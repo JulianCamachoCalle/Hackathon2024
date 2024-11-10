@@ -39,7 +39,7 @@
         <a routerLink="investigadores" class="nav-link">Investigadores</a>
       </li>
       <li class="nav-item">
-        <a routerLink="redes" class="nav-link">Investigadores</a>
+        <a routerLink="redes" class="nav-link">Redes Sociales</a>
       </li>
       <li class="nav-item">
         <a routerLink="autoridades" class="nav-link">Autoridades</a>
@@ -48,7 +48,7 @@
         <a routerLink="noticias" class="nav-link">Noticias</a>
       </li>
       <li class="nav-item">
-        <a href="#tutorial" class="nav-link">Tutorial</a>
+        <a routerLink="tutorial" class="nav-link">Tutorial</a>
       </li>
       <li class="nav-item">
         <a routerLink="dashboard" class="nav-link">Dashboard</a>
@@ -57,7 +57,7 @@
         <a routerLink="login" class="nav-link">Iniciar Sesión</a>
       </li>
       <li *ngIf="userLoginOn" class="nav-item">
-        <a class="nav-link">Cerrar Sesión</a>
+        <a class="nav-link" (click)="logOut()">Cerrar Sesión</a>
       </li>
     </nav>
   </div>
