@@ -1,0 +1,122 @@
+.encabezado-nosotros {
+  width: 100%;
+  height: 60vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-item-background {
+  background-size: cover;
+  background-position: top;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: inset -100rem -100rem rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.carousel-caption p {
+  font-size: 1.05rem;
+  width: 40%;
+  margin: auto;
+  font-weight: 700;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #ffffff;
+}
+
+.services {
+  background-color: #1b1b1b;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.service-title,
+.service-description {
+  color: #e6e6e6;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+  margin: 1rem 0;
+}
+
+.service-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.service-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.service-title:hover,
+.service-description:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: #0056b3;
+}
+
+.service-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.service-card:active {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

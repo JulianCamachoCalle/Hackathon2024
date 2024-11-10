@@ -1,0 +1,79 @@
+<div class="encabezado-nosotros">
+  <ngb-carousel [interval]="5000" [pauseOnHover]="true">
+    <ng-template ngbSlide *ngFor="let img of images">
+      <div
+        class="carousel-item-background"
+        [style.backgroundImage]="'url(' + img + ')'"
+      >
+        <div class="carousel-caption">
+          <h1>Vigilando Por Ti</h1>
+          <p>
+            Vigilando Por Ti es una iniciativa de colaboración entre ciudadanos,
+            la policía y los cuerpos de serenazgo, destinada a fortalecer la
+            seguridad en nuestras comunidades.
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+<br />
+<section class="services mb-5">
+  <h2 class="service-title">Nuestros servicios</h2>
+  <p class="service-description">
+    Ofrecemos información detallada y soporte a cada distrito y localidad en el
+    Perú, brindando acceso rápido y fácil a herramientas de seguridad y
+    comunicación.
+  </p>
+  <div class="service-cards mt-3">
+    <div class="service-card">
+      <div class="service-text">
+        <h3>Información Detallada por Distrito</h3>
+        <p>
+          Brindamos información específica sobre la seguridad y servicios en
+          cada distrito y localidad de nuestro país, adaptada a las necesidades
+          de cada comunidad.
+        </p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-text">
+        <h3>Acceso a Números de Emergencia</h3>
+        <p>
+          Proporcionamos acceso rápido a números de emergencia, incluyendo
+          policía, ambulancia, y defensa civil para una respuesta rápida en
+          situaciones críticas.
+        </p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-text">
+        <h3>Últimas Noticias de Seguridad</h3>
+        <p>
+          Mantenemos a los ciudadanos informados con las noticias más recientes
+          y detalladas sobre seguridad y eventos relevantes en su localidad.
+        </p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-text">
+        <h3>Canales de Comunicación</h3>
+        <p>
+          Ofrecemos herramientas de comunicación que permiten a los ciudadanos
+          conectarse directamente con las autoridades para informar o recibir
+          asistencia.
+        </p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-text">
+        <h3>Apoyo a la Comunidad</h3>
+        <p>
+          Brindamos apoyo integral, incluyendo recursos y servicios enfocados en
+          la mejora de la seguridad y bienestar de cada comunidad.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
