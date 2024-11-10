@@ -1,24 +1,31 @@
-<div class="container">
-    <p class="text-danger">{{loginError}}</p>
-    <form [formGroup]="loginForm">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre de Usuario</label>
-            <input formControlName="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
-                <div *ngIf="username.errors?.['required']">
-                    El Nombre de Usuario es requerido!
+<div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="container my-5 mx-0">
+        <p class="text-center h1">Iniciar Sesión</p>
+        <p class="text-danger">{{loginError}}</p>
+        <form [formGroup]="loginForm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre de Usuario</label>
+                <input formControlName="username" type="text" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+                    <div *ngIf="username.errors?.['required']">
+                        El Nombre de Usuario es requerido!
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
-            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
-                <div *ngIf="password.errors?.['required']">
-                    La Contraseña es requerida!
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                    <div *ngIf="password.errors?.['required']">
+                        La Contraseña es requerida!
+                    </div>
                 </div>
             </div>
-        </div>
-        <button type="submit" (click)="login()" class="btn btn-primary">Iniciar Sesión</button>
-    </form>
+            <button type="submit" (click)="login()" class="btn btn-primary">Iniciar Sesión</button>
+            <a href="../register" class="btn btn-danger mx-2">Registrate Aqui</a>
+        </form>
+    </div>
 </div>
+
+<router-outlet></router-outlet>

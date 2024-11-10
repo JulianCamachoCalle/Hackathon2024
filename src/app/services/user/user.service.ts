@@ -34,4 +34,8 @@ export class UserService {
     }
     return throwError(() => new Error('Algo salio mal. Intenete nuevamente'))
   }
+
+  registerUser(userData: any): Observable<any> {
+    return this.http.post(environment.urlApi+"user", userData);
+  }
 }
