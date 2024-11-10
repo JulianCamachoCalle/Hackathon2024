@@ -20,7 +20,8 @@ export class AutoridadesComponent {
     'Segundo paso: Explicamos la Política de Prevención de Riesgos.',
     'Tercer paso: Mostramos los estándares de seguridad cumplidos.',
     'Cuarto paso: Proporcionamos información detallada sobre la estrategia.',
-    'Quinto paso: Este boton puede direccionar hacia abajo para ver los compromisos'
+    'Quinto paso: Este boton puede direccionar hacia abajo para ver los compromisos',
+    'Sexto paso: Este apartado, pueden ver los numeros de emergencia y comunicarse con cada uno de ellos'
   ];
 
   startTutorial() {
@@ -29,10 +30,10 @@ export class AutoridadesComponent {
   }
   
   highlightStep() {
-    if (this.tutorialStep && this.tutorialStep <= 5) {
+    if (this.tutorialStep && this.tutorialStep <= 6) {
       setTimeout(() => {
         this.tutorialStep++;
-        if (this.tutorialStep > 5) {
+        if (this.tutorialStep > 6) {
           this.tutorialStep = 0; 
         } else {
           this.highlightStep();
