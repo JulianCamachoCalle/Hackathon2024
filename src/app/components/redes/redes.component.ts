@@ -1,14 +1,17 @@
 import { Component, OnInit, AfterViewInit, Renderer2 } from '@angular/core';
-
+import { CommonModule } from '@angular/common'; // Importa CommonModule
 @Component({
   selector: 'app-redes',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './redes.component.html',
   styleUrls: ['./redes.component.css'] // Cambiado de `styleUrl` a `styleUrls`
 })
 export class RedesComponent implements OnInit, AfterViewInit {
 
+  isHoveringPrimary = false;
+  isHoveringSecondary = false;
+  isHoveringSuccess = false;
   constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
@@ -38,4 +41,6 @@ export class RedesComponent implements OnInit, AfterViewInit {
   goToWebsite() {
     window.open('https://elcomercio.pe/', '_blank');
   }
+
+ 
 }

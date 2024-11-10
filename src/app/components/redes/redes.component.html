@@ -2,19 +2,40 @@
 <div class="container mt-3">
   <div class="row justify-content-center">
     <div class="col-auto">
-      <button class="btn btn-primary" (click)="goToTikTok()">TikTok</button>
+      <button 
+        class="btn btn-primary btn-circle" 
+        (click)="goToTikTok()" 
+        [ngStyle]="{'background-color': isHoveringPrimary ? '#0056b3' : ''}"
+        (mouseenter)="isHoveringPrimary = true"
+        (mouseleave)="isHoveringPrimary = false">
+        <i class="bi bi-tiktok"></i>
+      </button>
     </div>
     <div class="col-auto">
-      <button class="btn btn-secondary" (click)="goToFacebook()">Facebook</button>
+      <button 
+        class="btn btn-secondary btn-circle" 
+        (click)="goToFacebook()" 
+        [ngStyle]="{'background-color': isHoveringSecondary ? '#444950' : ''}"
+        (mouseenter)="isHoveringSecondary = true"
+        (mouseleave)="isHoveringSecondary = false">
+        <i class="bi bi-facebook"></i>
+      </button>
     </div>
     <div class="col-auto">
-      <button class="btn btn-success" (click)="goToWebsite()">Página Web Principal</button>
+      <button 
+        class="btn btn-success btn-circle" 
+        (click)="goToWebsite()" 
+        [ngStyle]="{'background-color': isHoveringSuccess ? '#1e7e34' : ''}"
+        (mouseenter)="isHoveringSuccess = true"
+        (mouseleave)="isHoveringSuccess = false">
+        <i class="bi bi-browser-chrome"></i>
+      </button>
     </div>
   </div>
 </div>
 
 <div class="container text-center mt-4">
-  <h2>TIKTOKS</h2>
+  <h2 class="title-design">TIKTOKS</h2>
 </div>
 
 <!-- Contenedor de videos TikTok -->
@@ -44,9 +65,82 @@
   <script async src="https://www.tiktok.com/embed.js"></script>
   
   <div class="container text-center mt-4">
-    <h2>Pagina Web Informacion</h2>
+    <h2 class="title-design1">Pagina Web Informacion</h2>
+  </div>
+<!-- Card para la inseguridad ciudadana -->
+<div class="card-container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Inseguridad Ciudadana</h3>
+    </div>
+    <div class="card-body">
+      <p>La inseguridad ciudadana es uno de los problemas más grandes de nuestra sociedad. A medida que el crimen se vuelve más común, la necesidad de tomar acciones efectivas aumenta.</p>
+      <a href='https://elcomercio.pe/' target="_blank" class="btn btn-info">Más Información</a>
+    </div>
   </div>
 
-  <div class="container text-center mt-4">
-    <h2>Facebook-Publicaciones</h2>
+  <!-- Otra tarjeta sobre medidas de seguridad -->
+  <div class="card">
+    <div class="card-header">
+      <h3>Medidas de Seguridad</h3>
+    </div>
+    <div class="card-body">
+      <p>Existen diversas medidas que podemos tomar para mejorar nuestra seguridad, como la instalación de cámaras de seguridad, la educación en prevención del delito, y la participación comunitaria.</p>
+      <a href='https://elcomercio.pe/' target="_blank" class="btn btn-info">Ver Medidas</a>
+    </div>
   </div>
+
+  <!-- Card sobre tecnología en seguridad -->
+  <div class="card">
+    <div class="card-header">
+      <h3>Tecnología en Seguridad</h3>
+    </div>
+    <div class="card-body">
+      <p>La tecnología ha jugado un papel importante en la mejora de la seguridad ciudadana, a través de aplicaciones móviles, cámaras de vigilancia y sistemas de alerta en tiempo real.</p>
+      <a href="https://www.tecnologiaseguridad.com" target="_blank" class="btn btn-info">Descubrir Tecnología</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <div class="container text-center mt-4">
+    <h2 class="title-design2">Facebook-Publicaciones</h2>
+  </div>
+<!-- Card informativa de Facebook -->
+<div class="card-container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Redes Sociales y Seguridad</h3>
+    </div>
+    <div class="card-body">
+      <p>Las redes sociales son herramientas poderosas, pero también pueden ser un medio para difundir información errónea sobre la seguridad. Es importante ser conscientes de lo que compartimos.</p>
+      <a href="https://www.facebook.com/elcomercio.pe/" target="_blank" class="btn btn-info">Visitar Facebook</a>
+    </div>
+  </div>
+
+  <!-- Card sobre consejos en redes -->
+  <div class="card">
+    <div class="card-header">
+      <h3>Consejos en Redes</h3>
+    </div>
+    <div class="card-body">
+      <p>Es crucial aprender a usar las redes sociales de forma responsable, evitando compartir información sensible o falsa que pueda perjudicar la seguridad de la comunidad.</p>
+      <a href="https://www.facebook.com/ConsejosSeguridad" target="_blank" class="btn btn-info">Ver Consejos</a>
+    </div>
+  </div>
+
+  <!-- Card sobre cómo protegerse en línea -->
+  <div class="card">
+    <div class="card-header">
+      <h3>Cómo Protegerse en Línea</h3>
+    </div>
+    <div class="card-body">
+      <p>Protéger tu información personal en línea es esencial para evitar fraudes y ciberataques. Aprende sobre el uso de contraseñas seguras, VPN y protección contra el phishing.</p>
+      <a href="https://www.gonetworksecurity.com" target="_blank" class="btn btn-info">Protégerse en Línea</a>
+    </div>
+  </div>
+</div>
+
