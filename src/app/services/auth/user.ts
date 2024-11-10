@@ -4,6 +4,9 @@ export interface User {
     password: string;
     nombre: string;
     apellido: string;
+    departamento: string;
+    provincia: string;
+    distrito: string;
     email: string;
     dni: string;
     telefono: string;

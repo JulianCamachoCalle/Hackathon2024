@@ -30,6 +30,39 @@
             <div *ngIf="apellido?.errors?.['required']">Su Apellido es requerido!</div>
           </div>
         </div>
+
+        <!-- Campo Departamento -->
+        <div class="mb-3">
+          <label for="exampleInputDepartamento" class="form-label">Departamento</label>
+          <select formControlName="departamento" class="form-select" (change)="seleccionDepartamento()">
+            <option value="">Seleccione un Departamento</option>
+            <option *ngFor="let departamento of departamentos" [value]="departamento.nombre">
+              {{ departamento.nombre }}
+            </option>
+          </select>
+        </div>
+        
+        <!-- Campo Provincia -->
+        <div class="mb-3" *ngIf="provincias.length > 0">
+          <label for="exampleInputProvincia" class="form-label">Provincia</label>
+          <select formControlName="provincia" class="form-select" (change)="seleccionProvincia()">
+            <option value="">Seleccione una Provincia</option>
+            <option *ngFor="let provincia of provincias" [value]="provincia.nombre">
+              {{ provincia.nombre }}
+            </option>
+          </select>
+        </div>
+        
+        <!-- Campo Distrito -->
+        <div class="mb-3" *ngIf="distritos.length > 0">
+          <label for="exampleInputDistrito" class="form-label">Distrito</label>
+          <select formControlName="distrito" class="form-select">
+            <option value="">Seleccione un Distrito</option>
+            <option *ngFor="let distrito of distritos" [value]="distrito">
+              {{ distrito }}
+            </option>
+          </select>
+        </div>
   
         <!-- Campo Email -->
         <div class="mb-3">
