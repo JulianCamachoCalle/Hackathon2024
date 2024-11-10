@@ -1,0 +1,22 @@
+.tiktok-videos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los videos se acomoden en una nueva fila si es necesario */
+  justify-content: center; /* Centra los videos en la pantalla */
+  gap: 10px; /* Reduce el espacio entre los videos */
+  padding: 10px;
+}
+
+.tiktok-embed {
+  flex: 1 1 300px; /* El flex le permite ser flexible, pero no menor a 300px */
+  max-width: 325px; /* Limita el ancho máximo para una apariencia uniforme */
+  min-width: 270px; /* Establece un ancho mínimo para que no se reduzcan demasiado */
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 150px; /* Ajusta el ancho de los botones */
+}
