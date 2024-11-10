@@ -1,9 +1,13 @@
 <div class="container">
-    <p *ngIf="!userLoginOn">Usuario NO autenticado</p>
-    <p *ngIf="userLoginOn">Usuario Autenticado</p>
-    <div *ngIf="userLoginOn">
-        <p>Nombre: {{userData?.nombre}}</p>
-        <p>Apellido: {{userData?.apellido}}</p>
-        <p>Email: {{userData?.email}}</p>
+    <p *ngIf="!userLoginOn" class="mensajeError">Usuario NO autenticado</p>
+    <p *ngIf="userLoginOn" class="mensajeVerificado">Usuario Autenticado</p>
+
+    <div class="card">
+        <div class="card-header">
+            Datos Personales
+        </div>
+        <div class="card-body m-0">
+            <app-personal-details></app-personal-details>
+        </div>
     </div>
 </div>
