@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { RedesComponent } from './components/redes/redes.component';
 import { CiudadanosComponent } from './components/ciudadanos/ciudadanos.component';
 import { InvestigadoresComponent } from './components/investigadores/investigadores.component';
 import { AutoridadesComponent } from './components/autoridades/autoridades.component';
@@ -11,5 +12,6 @@ export const routes: Routes = [
     { path: 'investigadores', component: InvestigadoresComponent },
     { path: 'autoridades', component: AutoridadesComponent },
     { path: 'dashboard', component: DashboardComponent },
-    { path: 'login', component: LoginComponent}
+    { path: 'login', component: LoginComponent},
+    { path: 'redes', component: RedesComponent }
 ];
