@@ -65,3 +65,182 @@ h1 {
   max-width: 500px;
   text-align: left;
 }
+
+.banner {
+  position: relative;
+  text-align: center;
+  height: 450px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 123%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 61, 116, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.titulo {
+  font-size: 90px;
+  font-family: system-ui;
+  color: white;
+}
+
+.texto1 {
+  color: white;
+}
+.texto2 {
+  color: white;
+  background-color: #95c1fa;
+}
+
+@media screen and (max-width: 450px) {
+  .titulo {
+    font-size: 50px;
+  }
+}
+
+.bordecolor {
+  border-left: 1px solid #1162cd;
+  background-color: #95c1fa;
+}
+
+@media screen and (max-width: 767px) {
+  .bordecolor {
+    border-left: 0px solid #1162cd;
+    border-top: 1px solid #1162cd;
+  }
+}
+
+@media (max-width: 480px) {
+  .col-md-6.order-md-1 {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 844px) {
+  .col-md-6.order-md-1 {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 1132px) {
+  .col-md-6.order-md-1 {
+    margin-left: 0 !important;
+  }
+}
+
+.custom_heading-container {
+  text-align: left;
+  margin-left: 6%;
+}
+
+.enviar-btn {
+  width: 32%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 15px;
+  background: #cbd1d8;
+  border: none;
+  font-weight: 500;
+  color: black;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.enviar-btn:hover {
+  background-color: #4395f4;
+  color: white;
+}
+
+.p-4:hover {
+  background: linear-gradient(
+    122deg,
+    rgba(67, 157, 223, 0.5),
+    rgba(182, 217, 255, 0.5)
+  );
+  transition: background 0.3s ease;
+  color: white;
+}
+
+.card_elemento {
+  position: relative;
+  overflow: hidden;
+}
+
+.card_elemento:hover .mensaje_hover {
+  opacity: 1;
+}
+
+.mensaje_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(22, 51, 77, 0.52);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50px;
+}
+
+.mensaje_hover p {
+  font-size: 15px;
+  color: white;
+  width: 80%;
+  margin: 5px 0;
+}
+
+.div-busqueda .form-control {
+  border: 5px solid #1162cd;
+}
+.mb-div {
+  margin-bottom: -15px;
+}
+.mb-div .bg-pregunta {
+  background-color: #0f2035;
+}
+.mb-div .bg-respuestas {
+  background-color: #253242;
+}
+
+.preguntas-respuestas .div-mb {
+  margin-bottom: 15px;
+}
+.preguntas-respuestas .bg-textos2 {
+  background-color: #536174;
+}
+.preguntas-respuestas .text-center {
+  margin-top: 10px;
+}
+.mb-div2 {
+  margin-bottom: 15px;
+}
+.mb-div2 .text-center {
+  margin-top: 10px;
+}

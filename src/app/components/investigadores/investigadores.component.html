@@ -20,24 +20,60 @@
     <button class="btn btn-primary" (click)="toggleInfoModal()">Cerrar</button>
   </div>
 </div>
-
-
-<!-- Contenido principal -->
-<div class="main-content mt-5">
-  <h1>Más seguridad en mi zona</h1>
-  <div class="card" style="width: 18rem">
-    <img src="..." class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Investigadores</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-
-      <!-- Botón para mostrar información adicional -->
-      <button class="btn btn-primary" id="toggleButton">
-        Mostrar información
-      </button>
+<div class="banner">
+  <img src="assets/img/preguntas-frecuentes.jpg" alt="Imagen de ejemplo" />
+  <div class="overlay"></div>
+  <div class="banner-text">
+    <h1 class="titulo">Investigadores</h1>
+  </div>
+</div>
+<br />
+<div class="container div-busqueda">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          id="input-busqueda"
+          class="form-control"
+          placeholder="Buscar..."
+          aria-label="Buscar..."
+          aria-describedby="button-addon2"
+          [(ngModel)]="searchTerm"
+          (input)="filterQuestions()"
+        />
+        <button
+          class="btn btn-primary"
+          type="button"
+          id="boton-busqueda"
+          (click)="filterQuestions()"
+        >
+          Buscar
+        </button>
+      </div>
     </div>
   </div>
 </div>
+<br />
+<div class="container-fluid p-5 mb-div">
+  <div class="row justify-content-center">
+    <div class="col-md-4 py-md-5 bg-pregunta">
+      <h2 class="text-center texto1">Preguntas</h2>
+    </div>
+    <div class="col-md-4 py-md-5 bg-respuestas">
+      <h2 class="text-center texto1">Respuestas</h2>
+    </div>
+  </div>
+</div>
+<section class="preguntas-respuestas p-5">
+  <div class="container-fluid div-mb" *ngFor="let item of filteredQuestions">
+    <div class="row justify-content-center pregunta">
+      <div class="col-md-4 py-md-5 texto2 bg-textos2">
+        <h2 class="text-center">{{ item.question }}</h2>
+      </div>
+      <div class="col-md-4 py-md-1 bordecolor bg-textos2">
+        <div class="texto1 py-md-4" [innerHTML]="item.answer"></div>
+      </div>
+    </div>
+  </div>
+</section>

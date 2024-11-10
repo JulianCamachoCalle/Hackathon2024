@@ -8,6 +8,7 @@ import { AutoridadesComponent } from './components/autoridades/autoridades.compo
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { TutorialComponent } from './tutorial/tutorial.component';
 export const routes: Routes = [
     { path: 'noticias', component: NoticiasComponent },
     { path: 'ciudadanos', component: CiudadanosComponent },
@@ -17,4 +18,5 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'redes', component: RedesComponent },
     { path: 'register', component: RegisterComponent}
+    {path:'tutorial', component: TutorialComponent}
 ];
