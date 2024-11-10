@@ -4,6 +4,7 @@ import { LoginService } from '../../services/auth/login.service';
 import { User } from '../../services/auth/user';
 import { PersonalDetailsComponent } from '../../components/personal-details/personal-details.component';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,12 +17,15 @@ export class DashboardComponent implements OnInit{
 
   userLoginOn:boolean=false;
 
-  constructor(private loginService:LoginService) {}
+  constructor(private loginService:LoginService, private router: Router) {}
 
   ngOnInit(): void {
       this.loginService.currentUserLoginOn.subscribe({
         next:(userLoginOn) => {
           this.userLoginOn=userLoginOn;
+          if (!userLoginOn) {
+            this.router.navigate(['/login']);
+          }
         }
       });
   }
