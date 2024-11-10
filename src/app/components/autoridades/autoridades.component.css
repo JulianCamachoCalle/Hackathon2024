@@ -1,37 +1,96 @@
-::view-transition-new(root){
-    animation: ciudadanos 3s ease 0s 1 normal forwards;
+html {
+    scroll-behavior: smooth;
+  }
+  
+::view-transition-new(root) {
+  animation: ciudadanos 3s ease 0s 1 normal forwards;
 }
 @keyframes ciudadanos {
-	from {
-		transform: scale(0.5);
-	}
+  from {
+    transform: scale(0.5);
+  }
 
-	to {
-		transform: scale(1);
-	}
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Contenedor principal con margen para la barra lateral */
 .main-content {
-    margin-left: 220px;
-    padding: 20px;
+  margin-left: 220px;
+  padding: 20px;
 }
 
-
-
 .logo-container {
-    padding: 10px;
+  padding: 10px;
 }
 
 .logo-img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* Título */
 h1 {
-    color: #000000;
-    align-items: center;
+  color: #000000;
+  align-items: center;
+}
+
+.icon-img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.5s;
+}
+
+.icon-img:hover {
+  transform: scale(1.5);
+}
+
+.excavator-img {
+  left: 25%;
+  bottom: -30px;
+  height: 100px;
+  transition: transform 0.5s;
+  transform-origin: center;
+}
+
+.excavator-img:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 576px) {
+  .excavator-img {
+    left: 10%;
+    bottom: 0;
+    height: 150px;
+  }
+}
+
+#slider {
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease-in-out;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(5px);
+}
+
+.custom-hover-btn {
+  transition: background-color 0.5s ease;
+}
+
+.custom-hover-btn:hover {
+  background-color: #333;
+}
+
+.custom-hover-btn-alt {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.custom-hover-btn-alt:hover {
+  background-color: #fff;
+  color: #e8a217;
 }
