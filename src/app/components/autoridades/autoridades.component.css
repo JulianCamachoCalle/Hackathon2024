@@ -15,6 +15,7 @@ html {
   }
 }
 
+
 /* Contenedor principal con margen para la barra lateral */
 .main-content {
   margin-left: 220px;
@@ -130,3 +131,75 @@ h1 {
   z-index: 9999;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+
+/* Centrar el título */
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c2a2a;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: linear-gradient(to right, #d32f2f 33%, #ffffff 33%, #ffffff 66%, #d32f2f 66%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+  /* Contenedor principal para disponer las tarjetas horizontalmente */
+  .emergencias-contenedor-principal {
+    display: flex;
+    justify-content: space-around; /* Espaciado entre las tarjetas */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+  }
+  
+  /* Estilo de cada tarjeta */
+  .emergencias-container {
+    width: 400px;
+    min-height: 300px; /* Ajusta este valor a la altura que desees */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .categoria-emergencia h2 {
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .categoria-emergencia p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  .categoria-emergencia img {
+    width: 300px; /* Ajusta el ancho que prefieras */
+    height: 400px; /* Ajusta la altura que prefieras */
+    object-fit: contain; /* Ajusta el contenido sin distorsionar */
+    display: block;
+    margin: 10px auto; /* Centra la imagen dentro de la tarjeta */
+    border-radius: 5px; /* Opcional: redondea los bordes de las imágenes */
+  }
+  /* Estilo para los botones de llamada */
+.boton-llamada {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #92e77c; /* Color rojo */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .boton-llamada:hover {
+    background-color: #c9302c; /* Color rojo más oscuro al pasar el cursor */
+  }
