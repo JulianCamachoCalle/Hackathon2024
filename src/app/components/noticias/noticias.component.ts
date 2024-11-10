@@ -15,46 +15,32 @@ export class NoticiasComponent {
 
   noticias = [
     { 
-      titulo: 'Noticia Principal', 
-      resumen: 'Resumen de la noticia principal', 
-      distrito: 'Distrito1', 
-      imagen: 'logo.jpg'
+      titulo: 'Delincuentes balean bus con pasajeros frente a la Municipalidad de Los Olivos', 
+      resumen: 'Dos sujetos armados dispararon contra un bus lleno de pasajeros frente a la Municipalidad de Los Olivos, ubicada a la altura de la cuadra 8 de la avenida Carlos Izaguirre', 
+      distrito: 'Los Olivos', 
+      imagen: 'noticia1.png',
+      enlace: 'https://elcomercio.pe/lima/seguridad/los-olivos-delincuentes-balean-bus-con-pasajeros-frente-a-la-municipalidad-delincuencia-extorsion-ultimas-noticia/'
     },
     { 
-      titulo: 'Noticia 2', 
-      resumen: 'Resumen de la noticia 2', 
-      distrito: 'Distrito2', 
-      imagen: 'news-image2.jpg'
+      titulo: 'Comas: extorsionadores lanzan explosivo contra fachada de clínica', 
+      resumen: 'En el distrito de Comas, la clínica Universitaria, ubicada en la cuadra 60 de la avenida con el mismo nombre', 
+      distrito: 'Comas', 
+      imagen: 'noticia3.png',
+      enlace: 'https://elcomercio.pe/lima/seguridad/comas-extorsionadores-lanzan-explosivo-contra-fachada-de-clinica-estado-de-emergencia-ultimas-noticia/'
     },
     { 
-      titulo: 'Noticia 3', 
-      resumen: 'Resumen de la noticia 3', 
-      distrito: 'Distrito3', 
-      imagen: 'news-image3.jpg'
+      titulo: 'Macroconsult: Denuncias por extorsión crecieron 487 % entre el 2018 al 2023, ¿qué sectores son los más golpeados?', 
+      resumen: 'El Perú atraviesa por uno de sus peores escenarios en cuanto a extorsión. Según el análisis de Macroconsult, en los últimos años, la cifra de..', 
+      distrito: 'Los Olivos', 
+      imagen: 'noticia4.png',
+      enlace: 'https://elcomercio.pe/economia/mercados/extorsion-macroconsult-denuncias-por-extorsion-crecieron-487-entre-el-2018-al-2023-que-sectores-son-los-mas-golpeados-inseguridad-ciudadana-dina-boluarte-bodegas-transportes-construccion-noticia/'
     },
     { 
-      titulo: 'Noticia 4', 
-      resumen: 'Resumen de la noticia 4', 
-      distrito: 'Distrito4', 
-      imagen: 'news-image4.jpg'
-    },
-    { 
-      titulo: 'Noticia 5', 
-      resumen: 'Resumen de la noticia 5', 
-      distrito: 'Distrito1', 
-      imagen: 'news-image5.jpg'
-    },
-    { 
-      titulo: 'Noticia 6', 
-      resumen: 'Resumen de la noticia 6', 
-      distrito: 'Distrito2', 
-      imagen: 'news-image6.jpg'
-    },
-    { 
-      titulo: 'Noticia 7', 
-      resumen: 'Resumen de la noticia 7', 
-      distrito: 'Distrito3', 
-      imagen: 'news-image7.jpg'
+      titulo: 'Ate: presuntos sicarios asesinan a hombre dentro de su vehículo', 
+      resumen: 'Continúan los crímenes en medio del estado de emergencia. Esta vez, un hombre fue asesinado de ocho balazos dentro de su vehículo en la puerta de su casa...', 
+      distrito: 'Ate', 
+      imagen: 'noticia5.png',
+      enlace: 'https://elcomercio.pe/lima/ate-presuntos-sicarios-asesinan-de-ocho-balazos-a-hombre-dentro-de-su-vehiculo-estado-de-emergencia-crimen-ultimas-noticia/'
     }
   ];
 

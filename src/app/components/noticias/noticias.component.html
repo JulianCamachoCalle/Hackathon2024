@@ -15,23 +15,22 @@
         (ngModelChange)="filterNoticias()"
       >
         <option value="">Filtrar por distrito</option>
-        <option value="Distrito1">Distrito 1</option>
-        <option value="Distrito2">Distrito 2</option>
-        <option value="Distrito3">Distrito 3</option>
-        <option value="Distrito4">Distrito 4</option>
+        <option value="Los Olivos">Los Olivos</option>
+        <option value="Comas">Comas</option>
+        <option value="Ate">Ate</option>
       </select>
     </div>
   </div>
 
   <div class="col-md-8">
     <div class="card mb-4">
-      <img src="../../../assets/img/logo.jpg" class="card-img-top" alt="Noticia principal" />
+      <img src="/assets/img/noticias/noticia2.png" class="card-img-top" alt="Noticia principal" />
       <div class="card-body">
-        <h3 class="card-title">Título de la noticia principal</h3>
+        <h3 class="card-title">Los Olivos: delincuentes roban 10 mil soles a salida de banco</h3>
         <p class="card-text">
-          Resumen de la noticia principal, con detalles relevantes...
+          Una mujer fue víctima de un violento asalto en Los Olivos, justo después de salir de una entidad bancaria. La víctima fue abordada por dos delincuentes armados que la amenazaron con armas de fuego para despojarla de 10 mil soles.
         </p>
-        <a href="#" class="btn btn-primary">Leer más</a>
+        <a href="https://elcomercio.pe/lima/los-olivos-delincuentes-roban-10-mil-soles-a-salida-de-banco-ultimas-noticia/" target="_blanck" class="btn btn-primary">Leer más</a>
       </div>
     </div>
 
@@ -41,11 +40,11 @@
           *ngFor="let noticia of filteredNoticias"
         >
           <div class="card shadow-sm hover-shadow">
-            <img src="assets/img/{{ noticia.imagen }}" class="card-img-top" alt="Noticia" />
+            <img src="/assets/img/noticias/{{ noticia.imagen }}" class="card-img-top" alt="Noticia" />
             <div class="card-body">
               <h5 class="card-title">{{ noticia.titulo }}</h5>
               <p class="card-text">{{ noticia.resumen }}</p>
-              <a href="#" class="btn btn-outline-primary">Leer más</a>
+              <a href="{{ noticia.enlace }}" target="_blank" class="btn btn-outline-primary">Leer más</a>
             </div>
           </div>
         </div>
