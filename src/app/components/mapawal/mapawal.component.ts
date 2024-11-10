@@ -1,5 +1,6 @@
 /// <reference types="@types/google.maps" />
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-mapawal',
@@ -44,14 +45,35 @@ export class MapawalComponent implements OnInit {
           infoWindow.open(this.map, marcador);
 
           this.map?.setCenter(ubicacionAyuda);
+
+          // Notificación de éxito con SweetAlert2
+          Swal.fire({
+            icon: 'success',
+            title: '¡Ubicación encontrada!',
+            text: 'Tu solicitud de ayuda se ha registrado.',
+            showConfirmButton: true
+          });
         },
         (error) => {
           console.error("Error obteniendo la ubicación", error);
-          alert("No se pudo obtener la ubicación actual. Verifica los permisos de ubicación.");
+
+          // Alerta de error con SweetAlert2
+          Swal.fire({
+            icon: 'error',
+            title: 'Error al obtener la ubicación',
+            text: 'No se pudo obtener la ubicación actual. Verifica los permisos de ubicación.',
+            showConfirmButton: true
+          });
         }
       );
     } else {
-      alert("La geolocalización no es compatible con este navegador.");
+      // Alerta para navegador incompatible con SweetAlert2
+      Swal.fire({
+        icon: 'warning',
+        title: 'Geolocalización no compatible',
+        text: 'La geolocalización no es compatible con este navegador.',
+        showConfirmButton: true
+      });
     }
   }
 }
