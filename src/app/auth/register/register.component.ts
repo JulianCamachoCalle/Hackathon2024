@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
         },
         {
           nombre: 'Bongará',
-          distritos: ['Chisquilla', 'Churuja', 'Corosha', 'Cuispes', 'Florida', 
+          distritos: ['Chisquilla', 'Churuja', 'Corosha', 'Cuispes', 'Florida',
             'Jazán', 'Jumbilla', 'Recta', 'San Carlos', 'Shipasbamba', 'Valera', 'Yambrasbamba']
         },
         {
@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
           distritos: ['Camporredondo', 'Cocabamba', 'Colcamar', 'Conila', 'Inguilpata',
             'Lámud', 'Longuita', 'Lonya Chico', 'Luya', 'Luya Viejo',
             'María', 'Ocalli', 'Ocumal', 'Pisuquía', 'Providencia',
-            'San Cristóbal', 'San Francisco del Yeso', 'San Jerónimo', 'San Juan de Lopecancha', 
+            'San Cristóbal', 'San Francisco del Yeso', 'San Jerónimo', 'San Juan de Lopecancha',
             'Santa Catalina', 'Santo Tomás', 'Tingo', 'Trita']
         },
         {
@@ -220,59 +220,50 @@ export class RegisterComponent implements OnInit {
       provincias: [
         {
           nombre: 'Arequipa',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          distritos: ['Alto Selva Alegre', 'Arequipa', 'Cayma', 'Cerro Colorado', 'Characato',
+            'Chiguata', 'Jacobo Hunter', 'José Luis Bustamante y Rivero', 'La Joya', 'Mariano Melgar',
+            'Miraflores', 'Mollebaya', 'Paucarpata', 'Pocsi', 'Polobaya',
+            'Quequeña', 'Sabandía', 'Sachaca', 'San Juan de Siguas', 'San Juan de Tarucani',
+            'Santa Isabel de Siguas', 'Santa Rita de Siguas', 'Socabaya', 'Tiabaya', 'Uchumay',
+            'Vitor', 'Yanahuara', 'Yarabamba', 'Yura']
         },
         {
           nombre: 'Camaná',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          distritos: ['Camaná', 'José María Quimper', 'Mariano Nicolás Valcarcel', 'Mariscal Cáceres', 'Nicolás de Piérol',
+            'Ocoña', 'Quilca', 'Samuel Pastor']
         },
         {
           nombre: 'Caravelí',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          distritos: ['Acarí', 'Atico', 'Atiquipa', 'Bella Unión', 'Cahuacho',
+            'Caravelí', 'Chala', 'Cháparra', 'Huanuhuanu', 'Jaquí',
+            'Lomas', 'Quicacha', 'Yauca']
         },
         {
           nombre: 'Castilla',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          distritos: ['Aplao', 'Andahua', 'Ayo', 'Chachas', 'Chilcaymarca',
+            'Choco', 'Huancarqui', 'Machaguay', 'Orcopampa', 'Pampacolca',
+            'Tipán', 'Uñón', 'Uraca', 'Viraco']
         },
         {
           nombre: 'Caylloma',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          distritos: ['Achoma', 'Cabanaconde', 'Callalli', 'Caylloma', 'Chivay',
+            'Coporaque', 'Huambo', 'Huanca', 'Ichupampa', 'Lari',
+            'Lluta', 'Maca', 'Madrigal', 'Majes', 'San Antonio de Chuca',
+            'Sibayo', 'Tapay', 'Tisco', 'Tuti', 'Yanque']
         },
         {
           nombre: 'Condesuyos',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          distritos: ['Andaray', 'Cayarani', 'Chichas', 'Chuquibamba', 'Iray',
+            'Río Grande', 'Salamanca', 'Yanaquihua', 'Registro civil']
         },
         {
           nombre: 'Islay',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          distritos: ['Cocachacra', 'Deán Valdivia', 'Islay', 'Mejía', 'Mollendo', 'Punta de Bombón']
         },
         {
           nombre: 'La Unión',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          distritos: ['Alca', 'Charcana', 'Cotahuasi', 'Huaynacotas', 'Pampamarca',
+            'Puyca', 'Quechualla', 'Sayla', 'Tauría', 'Tomepampa', 'Toro']
         },
       ]
     },
@@ -280,127 +271,604 @@ export class RegisterComponent implements OnInit {
       nombre: 'Ayacucho',
       provincias: [
         {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          nombre: "Cangallo",
+          distritos: [
+            "Cangallo", "Chuschi", "Los Morochucos", "María Parado de Bellido", "Paras",
+            "Totos"
+          ]
         },
+        {
+          nombre: "Huamanga",
+          distritos: [
+            "Acocro", "Acos Vinchos", "Andrés Avelino Cáceres Dorregaray", "Ayacucho", "Carmen Alto",
+            "Chiara", "Jesús Nazareno", "Ocros", "Pacaycasa", "Quinua", "San José de Ticllas",
+            "San Juan Bautista", "Santiago de Pischa", "Socos", "Tambillo", "Vinchos"
+          ]
+        },
+        {
+          nombre: "Huanca Sancos",
+          distritos: [
+            "Carapo", "Sancos", "Sacsamarca", "Santiago de Lucanamarca"
+          ]
+        },
+        {
+          nombre: "Huanta",
+          distritos: [
+            "Ayahuanco", "Canayre", "Chaca", "Huamanguilla", "Huanta", "Iguain", "Llochegua",
+            "Luricocha", "Pucacolpa", "Santillana", "Sivia", "Uchuraccay"
+          ]
+        },
+        {
+          nombre: "La Mar",
+          distritos: [
+            "Anco", "Anchihuay", "Ayna", "Chilcas", "Chungui", "Luis Carranza", "Oronccoy",
+            "Samugari", "Santa Rosa", "San Miguel", "Tambo"
+          ]
+        },
+        {
+          nombre: "Lucanas",
+          distritos: [
+            "Aucara", "Cabana", "Carmen Salcedo", "Chaviña", "Chipao", "Huac-Huas", "Laramate",
+            "Leoncio Prado", "Llauta", "Lucanas", "Ocaña", "Otoca", "Puquio", "Saisa", "San Cristóbal",
+            "San Juan", "San Pedro", "San Pedro de Palco", "Santa Ana de Huaycahuacho", "Santa Lucía"
+          ]
+        },
+        {
+          nombre: "Parinacochas",
+          distritos: [
+            "Chumpi", "Coracora", "Coronel Castañeda", "Pacapausa", "Pullo", "Puyusca",
+            "San Francisco de Ravacayco", "Upahuacho"
+          ]
+        },
+        {
+          nombre: "Páucar del Sara Sara",
+          distritos: [
+            "Colta", "Corculla", "Lampa", "Marcabamba", "Oyolo", "Pararca", "Pausa",
+            "San Javier de Alpabamba", "San José de Ushua", "Sara Sara"
+          ]
+        },
+        {
+          nombre: "Sucre",
+          distritos: [
+            "Belén", "Chalcos", "Chilcayoc", "Huacaña", "Morcolla", "Paico", "San Pedro de Larcay",
+            "San Salvador de Quije", "Santiago de Paucaray", "Querobamba", "Soras"
+          ]
+        },
+        {
+          nombre: "Víctor Fajardo",
+          distritos: [
+            "Alcamenca", "Apongo", "Asquipata", "Canaria", "Cayara", "Colca", "Huamanquiquia",
+            "Huancapi", "Huancaraylla", "Huaya", "Sarhua", "Vilcanchos"
+          ]
+        },
+        {
+          nombre: "Vilcashuamán",
+          distritos: [
+            "Accomarca", "Carhuanca", "Concepción", "Huambalpa", "Independencia", "Saurama",
+            "Vilcashuamán", "Vischongo"
+          ]
+        }
       ]
     },
     {
       nombre: 'Cajamarca',
       provincias: [
-        {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
-        },
+        [
+          {
+            nombre: "Cajamarca",
+            distritos: [
+              "Asunción", "Cajamarca", "Chetilla", "Cospán", "Jesús",
+              "La Encañada", "Llacanora", "Los Baños del Inca", "Magdalena", "Matara",
+              "Namora", "San Juan"
+            ]
+          },
+          {
+            nombre: "Cajabamba",
+            distritos: [
+              "Cachachi", "Cajabamba", "Condebamba", "Sitacocha"
+            ]
+          },
+          {
+            nombre: "Celendín",
+            distritos: [
+              "Celendín", "Chumuch", "Cortegana", "Huasmin", "Jorge Chávez",
+              "José Gálvez", "La Libertad de Pallán", "Miguel Iglesias", "Oxamarca", "Sorochuco",
+              "Sucre", "Utco"
+            ]
+          },
+          {
+            nombre: "Chota",
+            distritos: [
+              "Anguía", "Chadín", "Chalamarca", "Chiguirip", "Chimban",
+              "Choropampa", "Cochabamba", "Conchán", "Huambos", "Lajas",
+              "Llama", "Miracosta", "Paccha", "Pion", "Querocoto",
+              "San Juan de Licupis", "Tacabamba", "Tocmoche"
+            ]
+          },
+          {
+            nombre: "Contumazá",
+            distritos: [
+              "Chilete", "Contumazá", "Cupisnique", "Guzmango", "San Benito",
+              "Santa Cruz de Toledo", "Tantarica", "Yonan"
+            ]
+          },
+          {
+            nombre: "Cutervo",
+            distritos: [
+              "Callayuc", "Choros", "Cujillo", "Cutervo", "La Ramada",
+              "Pimpingos", "Querocotillo", "San Andrés de Cutervo", "San Juan de Cutervo", "San Luis de Lucma",
+              "Santa Cruz", "Santo Domingo de la Capilla", "Santo Tomás", "Socota", "Toribio Casanova"
+            ]
+          },
+          {
+            nombre: "Hualgayoc",
+            distritos: [
+              "Bambamarca", "Chugur", "Hualgayoc"
+            ]
+          },
+          {
+            nombre: "Jaén",
+            distritos: [
+              "Bellavista", "Chontali", "Colasay", "Huabal", "Jaén",
+              "Las Pirias", "Pomahuaca", "Pucará", "Sallique", "San Felipe",
+              "San José del Alto", "Santa Rosa"
+            ]
+          },
+          {
+            nombre: "San Ignacio",
+            distritos: [
+              "Chirinos", "Huarango", "La Coipa", "Namballe", "San Ignacio",
+              "San José de Lourdes", "Tabaconas"
+            ]
+          },
+          {
+            nombre: "San Marcos",
+            distritos: [
+              "Chancay", "Eduardo Villanueva", "Gregorio Pita", "Ichocán", "José Manuel Quiroz",
+              "José Sabogal", "Pedro Gálvez"
+            ]
+          },
+          {
+            nombre: "San Miguel",
+            distritos: [
+              "Bolívar", "Calquis", "Catilluc", "El Prado", "La Florida",
+              "Llapa", "Nanchoc", "Niepos", "San Gregorio", "San Miguel",
+              "San Silvestre de Cochán", "Tongod", "Unión Agua Blanca"
+            ]
+          },
+          {
+            nombre: "San Pablo",
+            distritos: [
+              "San Bernardino", "San Luis", "San Pablo", "Tumbaden"
+            ]
+          },
+          {
+            nombre: "Santa Cruz",
+            distritos: [
+              "Andabamba", "Catache", "Chancaybaños", "La Esperanza", "Ninabamba",
+              "Pulan", "Saucepampa", "Sexi", "Uticyacu", "Yauyucan",
+              "Santa Cruz"
+            ]
+          }
+        ]
       ]
     },
     {
       nombre: 'Constitucional de Callao',
       provincias: [
         {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
-        },
+          nombre: "Callao",
+          distritos: [
+            "Bellavista", "Carmen de la Legua Reynoso", "Callao", "La Perla", "La Punta",
+            "Mi Perú", "Ventanilla"
+          ]
+        }
       ]
     },
     {
       nombre: 'Cuzco',
       provincias: [
-        {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
-        },
+        [
+          {
+            nombre: "Acomayo",
+            distritos: [
+              "Acopia", "Acomayo", "Acos", "Mosoc Llacta", "Pomacanchi",
+              "Rondocan", "Sangarará"
+            ]
+          },
+          {
+            nombre: "Anta",
+            distritos: [
+              "Ancahuasi", "Anta", "Cachimayo", "Chinchaypujio", "Huarocondo",
+              "Limatambo", "Mollepata", "Pucyura", "Zurite"
+            ]
+          },
+          {
+            nombre: "Calca",
+            distritos: [
+              "Calca", "Coya", "Lamay", "Lares", "Pisac",
+              "San Salvador", "Taray", "Yanatile"
+            ]
+          },
+          {
+            nombre: "Canas",
+            distritos: [
+              "Checca", "Kunturkanki", "Langui", "Layo", "Pampamarca",
+              "Quehue", "Túpac Amaru", "Yanaoca"
+            ]
+          },
+          {
+            nombre: "Canchis",
+            distritos: [
+              "Checacupe", "Combapata", "Marangani", "Pitumarca",
+              "San Pablo", "San Pedro", "Sicuani", "Tinta"
+            ]
+          },
+          {
+            nombre: "Chumbivilcas",
+            distritos: [
+              "Capacmarca", "Chamaca", "Colquemarca", "Livitaca", "Llusco",
+              "Quiñota", "Santo Tomás", "Velille"
+            ]
+          },
+          {
+            nombre: "Cuzco",
+            distritos: [
+              "Ccorca", "Cuzco", "Poroy", "San Jerónimo", "San Sebastián",
+              "Santiago", "Saylla", "Wanchaq"
+            ]
+          },
+          {
+            nombre: "Espinar",
+            distritos: [
+              "Alto Pichigua", "Condoroma", "Coporaque", "Espinar", "Ocoruro",
+              "Pallpata", "Pichigua", "Suyckutambo"
+            ]
+          },
+          {
+            nombre: "La Convención",
+            distritos: [
+              "Echarate", "Huayopata", "Inkawasi", "Kimbiri", "Maranura",
+              "Megantoni", "Ocobamba", "Pichari", "Quellouno", "Santa Ana",
+              "Santa Teresa", "Vilcabamba", "Villa Kintiarina", "Villa Virgen"
+            ]
+          },
+          {
+            nombre: "Paruro",
+            distritos: [
+              "Accha", "Ccapi", "Colcha", "Huanoquite", "Omacha",
+              "Paccaritambo", "Paruro", "Pillpinto", "Yaurisque"
+            ]
+          },
+          {
+            nombre: "Paucartambo",
+            distritos: [
+              "Caicay", "Challabamba", "Colquepata", "Huancarani", "Kosñipata",
+              "Paucartambo"
+            ]
+          },
+          {
+            nombre: "Quispicanchi",
+            distritos: [
+              "Andahuaylillas", "Camanti", "Ccarhuayo", "Ccatca", "Cusipata",
+              "Huaro", "Lucre", "Marcapata", "Ocongate", "Oropesa", "Quiquijana",
+              "Urcos"
+            ]
+          },
+          {
+            nombre: "Urubamba",
+            distritos: [
+              "Chinchero", "Huayllabamba", "Machupicchu", "Maras", "Ollantaytambo",
+              "Urubamba", "Yucay"
+            ]
+          }
+        ]
       ]
     },
     {
       nombre: 'Huancavelica',
       provincias: [
         {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          nombre: "Acobamba",
+          distritos: [
+            "Acobamba", "Andabamba", "Anta", "Caja", "Marcas",
+            "Paucara", "Pomacocha", "Rosario"
+          ]
         },
+        {
+          nombre: "Angaraes",
+          distritos: [
+            "Anchonga", "Callanmarca", "Ccochaccasa", "Chincho", "Congalla",
+            "Huanca-Huanca", "Huayllay Grande", "Julcamarca", "Lircay", "San Antonio de Antaparco",
+            "Santo Tomas de Pata", "Secclla"
+          ]
+        },
+        {
+          nombre: "Castrovirreyna",
+          distritos: [
+            "Arma", "Aurahua", "Capillas", "Castrovirreyna", "Chupamarca",
+            "Cocas", "Huachos", "Huamatambo", "Mollepampa", "San Juan",
+            "Santa Ana", "Tantara", "Ticrapo"
+          ]
+        },
+        {
+          nombre: "Churcampa",
+          distritos: [
+            "Anco", "Chinchihuasi", "Churcampa", "El Carmen", "La Merced",
+            "Locroja", "Paucarbamba", "San Miguel de Mayocc", "San Pedro de Coris"
+          ]
+        },
+        {
+          nombre: "Huancavelica",
+          distritos: [
+            "Acobambilla", "Acoria", "Conayca", "Cuenca", "Huachocolpa",
+            "Huayllahuara", "Huancavelica", "Izcuchaca", "Laria", "Manta",
+            "Mariscal Cáceres", "Moya", "Nuevo Occoro", "Palca", "Pilchaca",
+            "Vilca", "Yauli"
+          ]
+        },
+        {
+          nombre: "Huaytará",
+          distritos: [
+            "Ayavi", "Córdova", "Huayacundo Arma", "Huaytará", "Laramarca",
+            "Ocoyo", "Pilpichaca", "Querco", "Quito-Arma", "San Antonio de Cusicancha",
+            "San Francisco de Sangayaico", "San Isidro", "Santiago de Chocorvos", "Santiago de Quirahuara", "Santo Domingo de Capillas",
+            "Tambo"
+          ]
+        },
+        {
+          nombre: "Tayacaja",
+          distritos: [
+            "Acraquia", "Acostambo", "Ahuaycha", "Colcabamba", "Daniel Hernández",
+            "Huachocolpa", "Huaribamba", "Ñahuimpuquio", "Pampas", "Pazos",
+            "Quishuar", "Salcabamba", "Salcahuasi", "San Marcos de Rocchac", "Surcubamba",
+            "Tintay Puncu"
+          ]
+        }
       ]
     },
     {
       nombre: 'Huánuco',
       provincias: [
         {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          nombre: "Ambo",
+          distritos: [
+            "Ambo", "Cayna", "Colpas", "Conchamarca", "Huacar",
+            "San Francisco", "San Rafael", "Tomay Kichwa"
+          ]
         },
+        {
+          nombre: "Dos de Mayo",
+          distritos: [
+            "Chuquis", "La Unión", "Marías", "Pachas", "Quivilla",
+            "Ripan", "Shunqui", "Sillapata", "Yanas"
+          ]
+        },
+        {
+          nombre: "Huacaybamba",
+          distritos: [
+            "Canchabamba", "Chuquibamba", "Huacaybamba", "Pinra"
+          ]
+        },
+        {
+          nombre: "Huamalíes",
+          distritos: [
+            "Arancay", "Chavín de Pariarca", "Jacas Grande", "Jircan", "Llata",
+            "Miraflores", "Monzón", "Punchao", "Puños", "Singa", "Tantamayo"
+          ]
+        },
+        {
+          nombre: "Huánuco",
+          distritos: [
+            "Amarilis", "Chinchao", "Churubamba", "Huánuco", "Margos",
+            "Pillco Marca", "Quisqui (Kichki)", "San Francisco de Cayrán", "San Pedro de Chaulán", "Santa María del Valle",
+            "Yarumayo"
+          ]
+        },
+        {
+          nombre: "Lauricocha",
+          distritos: [
+            "Baños", "Jesús", "Jivia", "Queropalca", "Rondos",
+            "San Francisco de Asís", "San Miguel de Cauri"
+          ]
+        },
+        {
+          nombre: "Leoncio Prado",
+          distritos: [
+            "Daniel Alomía Robles", "Hermilio Valdizán", "José Crespo y Castillo", "Luyando", "Mariano Dámaso Beraún",
+            "Rupa-Rupa (Tingo María)"
+          ]
+        },
+        {
+          nombre: "Marañón",
+          distritos: [
+            "Cholon", "Huacrachuco", "La Morada", "San Buenaventura", "Santa Rosa de Alto Yanajanca"
+          ]
+        },
+        {
+          nombre: "Pachitea",
+          distritos: [
+            "Chaglla", "Molino", "Panao", "Umari"
+          ]
+        },
+        {
+          nombre: "Puerto Inca",
+          distritos: [
+            "Codo del Pozuzo", "Honoria", "Puerto Inca", "Tournavista", "Yuyapichis"
+          ]
+        },
+        {
+          nombre: "Yarowilca",
+          distritos: [
+            "Aparicio Pomares", "Chacabamba", "Chavinillo", "Jacas Chico", "Obas", "Pampamarca"
+          ]
+        }
       ]
     },
     {
       nombre: 'Ica',
       provincias: [
         {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          nombre: "Chincha",
+          distritos: [
+            "Alto Larán", "Chavín", "Chincha Alta", "Chincha Baja", "El Carmen",
+            "Grocio Prado", "Pueblo Nuevo", "San Juan de Yanac", "San Pedro de Huacarpana", "Sunampe",
+            "Tambo de Mora"
+          ]
         },
+        {
+          nombre: "Ica",
+          distritos: [
+            "Ica", "La Tinguiña", "Los Aquijes", "Ocucaje", "Pachacútec",
+            "Parcona", "Pueblo Nuevo", "Salas", "San José de los Molinos", "San Juan Bautista",
+            "Santiago", "Subtanjalla", "Tate", "Yauca del Rosario"
+          ]
+        },
+        {
+          nombre: "Nazca",
+          distritos: [
+            "Changuillo", "El Ingenio", "Marcona", "Nazca", "Vista Alegre"
+          ]
+        },
+        {
+          nombre: "Palpa",
+          distritos: [
+            "Llipata", "Palpa", "Río Grande", "Santa Cruz", "Tibillo"
+          ]
+        },
+        {
+          nombre: "Pisco",
+          distritos: [
+            "Huancano", "Humay", "Independencia", "Paracas", "Pisco",
+            "San Andrés", "San Clemente", "Túpac Amaru Inca"
+          ]
+        }
       ]
     },
     {
       nombre: 'Junín',
       provincias: [
         {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
+          nombre: "Chanchamayo",
+          distritos: [
+            "Chanchamayo", "Pangoa", "San Luis de Shuaro", "San Ramón", "Vitoc",
+            "Río Tambo", "Pichanaki"
+          ]
         },
+        {
+          nombre: "Chupaca",
+          distritos: [
+            "Ahuac", "Chongos Alto", "Chupaca", "Colca", "Huachac",
+            "Huayucachi", "San Juan de Iscos", "Santo Domingo de Acobamba", "Tarmarca", "Tocancipa"
+          ]
+        },
+        {
+          nombre: "Concepción",
+          distritos: [
+            "Aco", "Acostambo", "Andamarca", "Chambara", "Chanchamayo",
+            "Comas", "Cochas", "Junín", "Junín de los Andes"
+          ]
+        },
+        {
+          nombre: "Jauja",
+          distritos: [
+            "Acolla", "Apata", "Ataura", "Canchayllo", "Curicaca",
+            "Huertas", "Jauja", "Manta", "Marco", "Masma",
+            "Masma Chicche", "Monobamba", "Río de los Molinos", "Sacsamarca", "San Pedro de Pari",
+            "Tunan Marca"
+          ]
+        },
+        {
+          nombre: "Junín",
+          distritos: [
+            "Carhuacallanga", "Chicche", "Chongos Bajo", "El Tambo", "Huancán",
+            "Huancayo", "Huasi", "Pancán", "Santo Domingo de Acobamba", "Sicaya",
+            "Santo Domingo de los Olleros"
+          ]
+        },
+        {
+          nombre: "Tarma",
+          distritos: [
+            "Huasahuasi", "Palca", "San Pedro de Cajas", "San Ramón", "Tarma",
+            "Tocache", "Cayna"
+          ]
+        }
       ]
     },
     {
       nombre: 'La Libertad',
       provincias: [
         {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
-        },
-      ]
-    },
-    {
-      nombre: 'Lambayeque',
-      provincias: [
-        {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
-        },
+          nombre: "Ascope",
+          distritos: [
+            "Ascope", "Casa Grande", "Chicama", "Chocope", "Magdalena de Cao",
+            "Paiján", "Rázuri", "Santiago de Cao"
+          ]
+        }
       ]
     },
     {
       nombre: 'Lima',
       provincias: [
         {
-          nombre: '',
+          nombre: 'Barranca',
+          distritos: ['Barranca', 'Paramonga', 'Pativilca', 'Supe', 'Supe Puerto']
+        },
+        {
+          nombre: 'Cajatambo',
+          distritos: ['', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '']
+        },
+        {
+          nombre: 'Canta',
+          distritos: ['', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '']
+        },
+        {
+          nombre: 'Cañete',
+          distritos: ['', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '']
+        },
+        {
+          nombre: 'Huaral',
+          distritos: ['', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '']
+        },
+        {
+          nombre: 'Huarochirí',
+          distritos: ['', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '']
+        },
+        {
+          nombre: 'Huaura',
+          distritos: ['', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '']
+        },
+        {
+          nombre: 'Oyón',
+          distritos: ['', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '',
+            '', '', '', '', '']
+        },
+        {
+          nombre: 'Provincia de Lima',
+          distritos: ['Ancón', 'Ate', 'Barranco', 'Breña', 'Carabayllo', 'Chaclacayo', 'Chorrillos', 'Cieneguilla', 'Comas', 'El Agustino', 'Huaycán (Comunidad)', 'Independencia', 'Jesús María', 'La Molina', 'La Victoria', 'Lima', 'Lince', 'Los Olivos', 'Lurigancho', 'Lurín', 'Magdalena del Mar', 'Miraflores', 'Pachacamac', 'Pucusana', 'Puente Piedra', 'Punta Hermosa', 'Punta Negra', 'Pueblo Libre', 'Rímac', 'San Bartolo', 'San Borja', 'San Isidro', 'San Juan de Lurigancho', 'San Juan de Miraflores', 'San Luis', 'San Martín de Porres', 'San Miguel', 'Santa Anita', 'Santa María del Mar', 'Santa Rosa', 'Santiago de Surco', 'Surquillo', 'Villa El Salvador', 'Villa María del Triunfo']
+        },
+        {
+          nombre: 'Yauyos',
           distritos: ['', '', '', '', '',
             '', '', '', '', '',
             '', '', '', '', '',
@@ -458,18 +926,6 @@ export class RegisterComponent implements OnInit {
     },
     {
       nombre: 'Piura',
-      provincias: [
-        {
-          nombre: '',
-          distritos: ['', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '',
-            '', '', '', '', '']
-        },
-      ]
-    },
-    {
-      nombre: 'Provincia de Lima',
       provincias: [
         {
           nombre: '',
