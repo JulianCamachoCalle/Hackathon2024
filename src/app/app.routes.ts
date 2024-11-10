@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { RedesComponent } from './components/redes/redes.component';

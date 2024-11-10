@@ -3,22 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    <!-- Contenido principal -->
-<div class="main-content">
-    <h1>Más seguridad en mi zona</h1>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Investigadores</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+  <div class="btn-top-right">
+    <!-- Botón que redirige al componente Ciudadanos -->
+    <a class="btn btn-primary" routerLink="ciudadanos" routerLinkActive="router-link-active" >
+      <i class="bi bi-house-door"></i>
+    </a>
+
+    <!-- Botón de información que despliega y oculta contenido al hacer clic -->
+    <button class="btn btn-secondary" type="button" (click)="toggleInfo()">
+      {{ isInfoVisible ? 'Cerrar' : 'Información' }}
+  </button>
 </div>
+
+<!-- Contenedor colapsable que muestra información de puntos de seguridad -->
+<div *ngIf="isInfoVisible" class="mt-3">
+  <div class="card card-body">
+      <h5>Puntos de Seguridad</h5>
+      <ul>
+          <li style="color: green;">Zona Segura: Nivel de seguridad alto</li>
+          <li style="color: orange;">Zona Precaución: Nivel de seguridad moderado</li>
+          <li style="color: red;">Zona Peligro: Nivel de seguridad bajo</li>
+      </ul>
+  </div>
+</div>
+
+   <!-- Contenido principal -->
+   <div class="main-content mt-5">
+       <h1>Más seguridad en mi zona</h1>
+       <div class="card" style="width: 18rem;">
+           <img src="..." class="card-img-top" alt="...">
+           <div class="card-body">
+               <h5 class="card-title">Investigadores</h5>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               
+               <!-- Botón para mostrar información adicional -->
+               <button class="btn btn-primary" id="toggleButton">Mostrar información</button>
+               
+               
+           </div>
+       </div>
+   </div>
 </body>
 </html>
