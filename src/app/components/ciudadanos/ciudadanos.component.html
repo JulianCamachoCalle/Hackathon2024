@@ -1,4 +1,37 @@
-<!--nosotros.component.html-->
+<div class="btn-top-right">
+  <a class="btn btn-primary" href="ciudadanos">
+    <i class="bi bi-house-door"></i>
+  </a>
+  <button class="btn btn-secondary" type="button" (click)="toggleInfoModal()">
+    {{ isInfoVisible ? "Cerrar" : "Información" }}
+  </button>
+</div>
+
+<div *ngIf="isInfoVisible" class="modal-backdrop">
+  <div class="modal-content">
+    <h5>Vigilando por Ti: Información de Seguridad</h5>
+    <p>
+      En <strong>Vigilando por Ti</strong>, nuestra misión es protegerte a ti y a tu comunidad.
+      <br><br>
+      Somos un proyecto web innovador que facilita el acceso a información de seguridad ciudadana y te ayuda a estar preparado ante cualquier situación.
+      <br><br>
+      Con nosotros, tendrás a tu alcance los números de contacto de servicios de emergencia como la policía, bomberos y otros recursos clave.
+    </p>
+    <p>
+      <em>"Tu seguridad, nuestra prioridad"</em> — Mantente informado, prevenido y seguro con Vigilando por Ti.
+    </p>
+    <h6>Puntos Clave para la Seguridad Ciudadana</h6>
+    <ul>
+      <li>Informar a las autoridades sobre cualquier actividad sospechosa.</li>
+      <li>Fomentar una cultura de prevención y colaboración.</li>
+      <li>Mantenerse atento a los recursos de emergencia disponibles.</li>
+      <li>Ayudar a los vecinos, especialmente a los más vulnerables.</li>
+    </ul>
+    <button class="btn btn-primary" (click)="toggleInfoModal()">Cerrar</button>
+  </div>
+</div>
+
+
 <div class="carouselFondo2">
   <div class="overlay2">
     <div><br><br><br><br /><br /></div>
