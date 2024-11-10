@@ -1,101 +1,105 @@
-<p *ngIf="errorMessage.length!=0" class="text-danger">{{errorMessage}}</p>
-<div *ngIf="(userLoginOn && !editMode) || !userLoginOn">
-    <p><b>Nombre de Usuario: </b> {{user?.username}} </p>
-    <p><b>Nombre: </b> {{user?.nombre}} </p>
-    <p><b>Apellido: </b> {{user?.apellido}}  </p>
-    <p><b>Dni: </b> {{user?.dni}}  </p>
-    <p><b>Email: </b> {{user?.email}}  </p>
-    <p><b>Teléfono: </b> {{user?.telefono}}  </p>
-    <button *ngIf="userLoginOn && !editMode" (click)="editMode=true" class="btn btn-dark m-2">
-        Editar Datos Personales
-    </button>
+<div class="user-profile-container">
+    <div class="user-profile-card">
+        <p *ngIf="errorMessage.length!=0" class="text-danger">{{errorMessage}}</p>
+        <div *ngIf="(userLoginOn && !editMode) || !userLoginOn">
+            <p class="mt-2 mb-4"><b>Nombre de Usuario: </b> {{user?.username}} </p>
+            <p class="my-4"><b>Nombre: </b> {{user?.nombre}} </p>
+            <p class="my-4"><b>Apellido: </b> {{user?.apellido}} </p>
+            <p class="my-4"><b>Dni: </b> {{user?.dni}} </p>
+            <p class="my-4"><b>Email: </b> {{user?.email}} </p>
+            <p class="my-4"><b>Teléfono: </b> {{user?.telefono}} </p>
+            <button *ngIf="userLoginOn && !editMode" (click)="editMode=true" class="btn btn-dark my-2">
+                Editar Datos Personales
+            </button>
+        </div>
+
+        <form *ngIf="userLoginOn && editMode" [formGroup]="registerForm">
+            <div class="form-group row my-4">
+                <label for="inputUsername" class="col-sm-4 col-form-label texto">Nombre de Usuario</label>
+                <div class="col-sm-8">
+                    <input type="text" formControlName="username" class="form-control" id="inputUsername">
+
+                    <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+                        <div *ngIf="username.errors?.['required']">
+                            El Nombre de Usuario es requerido!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row my-4">
+                <label for="inputNombre" class="col-sm-4 col-form-label">Nombre</label>
+                <div class="col-sm-8">
+                    <input type="text" formControlName="nombre" class="form-control" id="inputNombre">
+
+                    <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="text-danger">
+                        <div *ngIf="nombre.errors?.['required']">
+                            El Nombre es requerido!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row my-4">
+                <label for="inputApellido" class="col-sm-4 col-form-label">Apellido</label>
+                <div class="col-sm-8">
+                    <input type="text" formControlName="apellido" class="form-control" id="inputApellido">
+
+                    <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="text-danger">
+                        <div *ngIf="apellido.errors?.['required']">
+                            El Apellido es requerido!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row my-4">
+                <label for="inputDni" class="col-sm-4 col-form-label">DNI</label>
+                <div class="col-sm-8">
+                    <input type="text" formControlName="dni" class="form-control" id="inputDni">
+
+                    <div *ngIf="dni.invalid && (dni.dirty || dni.touched)" class="text-danger">
+                        <div *ngIf="dni.errors?.['required']">
+                            El DNI es requerido!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row my-4">
+                <label for="inputEmail" class="col-sm-4 col-form-label">Email</label>
+                <div class="col-sm-8">
+                    <input type="email" formControlName="email" class="form-control" id="inputEmail">
+
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                        <div *ngIf="email.errors?.['required']">
+                            El Email es requerido!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row my-4">
+                <label for="inputTelefono" class="col-sm-4 col-form-label">Teléfono</label>
+                <div class="col-sm-8">
+                    <input type="text" formControlName="telefono" class="form-control" id="inputTelefono">
+
+                    <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="text-danger">
+                        <div *ngIf="telefono.errors?.['required']">
+                            El Teléfono es requerido!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row my-4">
+                <label for="inputPassword" class="col-sm-4 col-form-label">Contraseña</label>
+                <div class="col-sm-8">
+                    <input type="password" formControlName="password" class="form-control" id="inputPassword">
+
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                        <div *ngIf="password.errors?.['required']">
+                            La Contraseña es requerido!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" (click)="savePersonalDetailsData()" class="btn btn-dark mt-3">Guardar</button>
+            <a class="btn btn-danger mt-3" (click)="editMode=false">Cancelar</a>
+        </form>
+    </div>
 </div>
-
-<form *ngIf="userLoginOn && editMode" [formGroup]="registerForm">
-    <div class="form-group row">
-        <label for="inputUsername" class="col-sm-1 col-form-label">Nombre de Usuario</label>
-        <div class="col-sm-11">
-            <input type="text" formControlName="username" class="form-control" id="inputUsername">
-
-            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
-                <div *ngIf="username.errors?.['required']">
-                    El Nombre de Usuario es requerido!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputNombre" class="col-sm-1 col-form-label">Nombre</label>
-        <div class="col-sm-11">
-            <input type="text" formControlName="nombre" class="form-control" id="inputNombre">
-
-            <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="text-danger">
-                <div *ngIf="nombre.errors?.['required']">
-                    El Nombre es requerido!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputApellido" class="col-sm-1 col-form-label">Apellido</label>
-        <div class="col-sm-11">
-            <input type="text" formControlName="apellido" class="form-control" id="inputApellido">
-
-            <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="text-danger">
-                <div *ngIf="apellido.errors?.['required']">
-                    El Apellido es requerido!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputDni" class="col-sm-1 col-form-label">DNI</label>
-        <div class="col-sm-11">
-            <input type="text" formControlName="dni" class="form-control" id="inputDni">
-
-            <div *ngIf="dni.invalid && (dni.dirty || dni.touched)" class="text-danger">
-                <div *ngIf="dni.errors?.['required']">
-                    El DNI es requerido!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputEmail" class="col-sm-1 col-form-label">Email</label>
-        <div class="col-sm-11">
-            <input type="email" formControlName="email" class="form-control" id="inputEmail">
-
-            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
-                <div *ngIf="email.errors?.['required']">
-                    El Email es requerido!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputTelefono" class="col-sm-1 col-form-label">Teléfono</label>
-        <div class="col-sm-11">
-            <input type="text" formControlName="telefono" class="form-control" id="inputTelefono">
-
-            <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="text-danger">
-                <div *ngIf="telefono.errors?.['required']">
-                    El Teléfono es requerido!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputPassword" class="col-sm-1 col-form-label">Contraseña</label>
-        <div class="col-sm-11">
-            <input type="password" formControlName="password" class="form-control" id="inputPassword">
-
-            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
-                <div *ngIf="password.errors?.['required']">
-                    La Contraseña es requerido!
-                </div>
-            </div>
-        </div>
-    </div>
-    <button type="submit" (click)="savePersonalDetailsData()" class="btn btn-dark mt-3">Guardar</button>
-    <a class="btn btn-danger mt-3" (click)="editMode=false">Cancelar</a>
-</form>
