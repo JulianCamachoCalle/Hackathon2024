@@ -1,3 +1,23 @@
-form {
-    margin: 20px;
+/* Asegura que el contenedor ocupe el 100% de la altura de la pantalla menos el espacio del footer */
+.min-vh-100 {
+    min-height: calc(100vh - 70px); /* Ajusta según la altura del footer */
+}
+
+/* Aplica sombra y bordes redondeados al formulario */
+.shadow-lg {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+/* Agrega margen entre los elementos del formulario */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Asegura que el formulario no se quede pegado al footer */
+body {
+    margin-bottom: 70px; /* Ajusta según la altura del footer */
 }

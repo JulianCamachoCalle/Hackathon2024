@@ -1,31 +1,36 @@
-<div class="container-fluid d-flex justify-content-center align-items-center">
-    <div class="container my-5 mx-0">
-        <p class="text-center h1">Iniciar Sesión</p>
-        <p class="text-danger">{{loginError}}</p>
+<div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container my-5 mx-0 shadow-lg rounded p-5 bg-white">
+        <p class="text-center h1 mb-4">Iniciar Sesión</p>
+        <p class="text-danger text-center">{{ loginError }}</p>
         <form [formGroup]="loginForm">
-            <div class="mb-3">
+            <div class="mb-4">
                 <label for="exampleInputEmail1" class="form-label">Nombre de Usuario</label>
                 <input formControlName="username" type="text" class="form-control" id="exampleInputEmail1"
-                    aria-describedby="emailHelp">
+                    aria-describedby="emailHelp" placeholder="Ingrese su nombre de usuario">
                 <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
                     <div *ngIf="username.errors?.['required']">
                         El Nombre de Usuario es requerido!
                     </div>
                 </div>
             </div>
-            <div class="mb-3">
+            <div class="mb-4">
                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"
+                    placeholder="Ingrese su contraseña">
                 <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
                     <div *ngIf="password.errors?.['required']">
                         La Contraseña es requerida!
                     </div>
                 </div>
             </div>
-            <button type="submit" (click)="login()" class="btn btn-primary">Iniciar Sesión</button>
-            <a href="../register" class="btn btn-danger mx-2">Registrate Aqui</a>
+            <div class="d-flex justify-content-between">
+                <button type="submit" (click)="login()" class="btn btn-primary">Iniciar Sesión</button>
+                <a href="../register" class="btn btn-danger">Registrate Aquí</a>
+            </div>
         </form>
+        <div class="text-center mt-5">
+            <img src="assets/img/seguridad.png" alt="Imagen de ejemplo" class="img-fluid" style="max-width: 100%; height: auto;">
+        </div>
     </div>
 </div>
-
 <router-outlet></router-outlet>
