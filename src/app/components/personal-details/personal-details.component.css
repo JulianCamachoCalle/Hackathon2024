@@ -70,6 +70,12 @@
     padding: 10px;
 }
 
+.user-profile-card .form-select {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+}
+
 .user-profile-card .form-control:focus {
     border-color: #80bdff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
