@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   loginError: string = "";
 
   loginForm = this.formBuilder.group({
-    username: ['Stormfic', Validators.required],
+    username: ['', Validators.required],
     password: ['', Validators.required],
   })
 
@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.loginForm.valid) {
+      this.loginError="";
       this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
         next: (userData) => {
           console.log(userData);

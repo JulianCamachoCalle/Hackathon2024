@@ -1,27 +1,29 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { LoginService } from './services/auth/login.service';
 import { FooterComponent } from "./footer/footer.component";
+import { JwtInterceptorService } from './services/auth/jwt-interceptor.service';
+import { ErrorInterceptorService } from './services/auth/error-interceptor.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, RouterLink, CommonModule, HttpClientModule, FooterComponent],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass:JwtInterceptorService, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass:ErrorInterceptorService, multi: true}
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit, OnDestroy{
+export class AppComponent implements OnInit{
 
   userLoginOn:boolean=false;
-  constructor(private loginService:LoginService) {}
+  constructor(private loginService:LoginService, private router:Router) {}
 
   title = 'Vigilando-Por-Ti';
-
-  ngOnDestroy(): void {
-      this.loginService.currentUserLoginOn.unsubscribe();
-  }
   
   ngOnInit(): void {
       this.loginService.currentUserLoginOn.subscribe({
@@ -29,5 +31,10 @@ export class AppComponent implements OnInit, OnDestroy{
           this.userLoginOn = userLoginOn;
         }
       })
+  }
+
+  logOut() {
+    this.loginService.logOut();
+    this.router.navigate(['/'])
   }
 }
