@@ -1,0 +1,79 @@
+<div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="container my-5 mx-0">
+      <p class="text-center h1">Regístrate Aquí</p>
+      <p class="text-danger">{{ errorMessage }}</p>
+      
+      <form [formGroup]="registerForm">
+        <!-- Campo Nombre de Usuario -->
+        <div class="mb-3">
+          <label for="exampleInputUsername" class="form-label">Nombre de Usuario</label>
+          <input formControlName="username" type="text" class="form-control" id="exampleInputUsername">
+          <div *ngIf="username?.invalid && (username?.dirty || username?.touched)" class="text-danger">
+            <div *ngIf="username?.errors?.['required']">El Nombre de Usuario es requerido!</div>
+          </div>
+        </div>
+  
+        <!-- Campo Nombre -->
+        <div class="mb-3">
+          <label for="exampleInputNombre" class="form-label">Nombre</label>
+          <input formControlName="nombre" type="text" class="form-control" id="exampleInputNombre">
+          <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="text-danger">
+            <div *ngIf="nombre?.errors?.['required']">Su Nombre es requerido!</div>
+          </div>
+        </div>
+  
+        <!-- Campo Apellido -->
+        <div class="mb-3">
+          <label for="exampleInputApellido" class="form-label">Apellido</label>
+          <input formControlName="apellido" type="text" class="form-control" id="exampleInputApellido">
+          <div *ngIf="apellido?.invalid && (apellido?.dirty || apellido?.touched)" class="text-danger">
+            <div *ngIf="apellido?.errors?.['required']">Su Apellido es requerido!</div>
+          </div>
+        </div>
+  
+        <!-- Campo Email -->
+        <div class="mb-3">
+          <label for="exampleInputEmail" class="form-label">Email</label>
+          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail">
+          <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-danger">
+            <div *ngIf="email?.errors?.['required']">El Email es requerido!</div>
+            <div *ngIf="email?.errors?.['email']">Ingrese un Email válido!</div>
+          </div>
+        </div>
+  
+        <!-- Campo DNI -->
+        <div class="mb-3">
+          <label for="exampleInputDni" class="form-label">DNI</label>
+          <input formControlName="dni" type="text" class="form-control" id="exampleInputDni">
+          <div *ngIf="dni?.invalid && (dni?.dirty || dni?.touched)" class="text-danger">
+            <div *ngIf="dni?.errors?.['required']">Su DNI es requerido!</div>
+            <div *ngIf="dni?.errors?.['pattern']">El DNI debe contener solo números!</div>
+          </div>
+        </div>
+  
+        <!-- Campo Teléfono -->
+        <div class="mb-3">
+          <label for="exampleInputTelefono" class="form-label">Teléfono</label>
+          <input formControlName="telefono" type="text" class="form-control" id="exampleInputTelefono">
+          <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)" class="text-danger">
+            <div *ngIf="telefono?.errors?.['required']">Su Teléfono es requerido!</div>
+            <div *ngIf="telefono?.errors?.['pattern']">El Teléfono debe contener solo números!</div>
+          </div>
+        </div>
+  
+        <!-- Campo Contraseña -->
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+          <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="text-danger">
+            <div *ngIf="password?.errors?.['required']">La Contraseña es requerida!</div>
+            <div *ngIf="password?.errors?.['minlength']">La Contraseña debe tener al menos 8 caracteres!</div>
+          </div>
+        </div>
+  
+        <button type="submit" (click)="register()" class="btn btn-primary">Registrar</button>
+        <a href="../login" class="btn btn-danger mx-2">Inicia Sesión Aquí</a>
+      </form>
+    </div>
+  </div>
+  
