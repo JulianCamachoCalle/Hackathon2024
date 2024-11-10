@@ -11,7 +11,7 @@
           respuesta rápida en tu comunidad. Unidos por una ciudad más segura.
         </p>
       </div>
-      <div class="d-flex justify-content-center mt-3">
+      <div class="d-flex justify-content-center mt-3" [ngClass]="{'highlight-step': tutorialStep === 5}">
         <button (click)="scrollToSection()" class="btn btn-dark me-3 shadow-lg custom-hover-btn">
           <i class="bi bi-arrow-down me-1"></i> Conoce más
         </button>
@@ -20,15 +20,16 @@
   </div>
 </section>
 
+<!-- Sección de Compromisos -->
 <section #compromisos class="container bg-black text-white rounded-lg mb-5 mt-5 px-4 py-4">
   <div class="position-relative mb-4">
     <h3 class="text-right text-warning font-weight-bold pb-3 border-bottom border-warning">
-      Logramos nuestros compromisos para ayudar a la poblacion junto con las autoridades
+      Logramos nuestros compromisos para ayudar a la población junto con las autoridades
     </h3>
   </div>
 
   <!-- Item 1 -->
-  <div class="d-flex align-items-center justify-content-between flex-column flex-sm-row py-3 border-bottom border-warning">
+  <div class="d-flex align-items-center justify-content-between flex-column flex-sm-row py-3 border-bottom border-warning" [ngClass]="{'highlight-step': tutorialStep === 1}">
     <figure class="mb-3 mb-sm-0">
       <img src="assets/svg/reglamento.svg" class="icon-img rounded-circle" alt="Reglamento" />
     </figure>
@@ -36,7 +37,7 @@
   </div>
 
   <!-- Item 2 -->
-  <div class="d-flex align-items-center justify-content-between flex-column-reverse flex-sm-row py-3 border-bottom border-warning">
+  <div class="d-flex align-items-center justify-content-between flex-column-reverse flex-sm-row py-3 border-bottom border-warning" [ngClass]="{'highlight-step': tutorialStep === 2}">
     <p class="font-weight-semibold h5">Política de Prevención de Riesgos.</p>
     <figure class="mb-3 mb-sm-0">
       <img src="assets/svg/politicas.svg" class="icon-img rounded-circle" alt="Politicas" />
@@ -44,7 +45,7 @@
   </div>
 
   <!-- Item 3 -->
-  <div class="d-flex align-items-center justify-content-between flex-column flex-sm-row py-3 border-bottom border-warning">
+  <div class="d-flex align-items-center justify-content-between flex-column flex-sm-row py-3 border-bottom border-warning" [ngClass]="{'highlight-step': tutorialStep === 3}">
     <figure class="mb-3 mb-sm-0">
       <img src="assets/svg/security.svg" class="icon-img rounded-circle" alt="Reglamento" />
     </figure>
@@ -52,18 +53,22 @@
   </div>
 
   <!-- Item 4 -->
-  <div class="d-flex align-items-center justify-content-between flex-column-reverse flex-sm-row py-3 border-bottom border-warning">
-    <p class="font-weight-semibold h5">Brindamos informacion detallada</p>
+  <div class="d-flex align-items-center justify-content-between flex-column-reverse flex-sm-row py-3 border-bottom border-warning" [ngClass]="{'highlight-step': tutorialStep === 4}">
+    <p class="font-weight-semibold h5">Brindamos información detallada</p>
     <figure class="mb-3 mb-sm-0">
       <img src="assets/svg/equipment.svg" class="icon-img rounded-circle" alt="Politicas" />
     </figure>
   </div>
-
-  <!-- Item 5 -->
-  <div class="d-flex align-items-center justify-content-between flex-column flex-sm-row py-3 border-bottom border-warning">
-    <figure class="mb-3 mb-sm-0">
-      <img src="assets/svg/soft-hadw.svg" class="icon-img rounded-circle" alt="Reglamento" />
-    </figure>
-    <p class="font-weight-semibold h5">Estrategia en colaboracion con policias base a datos recolectados</p>
-  </div>
 </section>
+
+<!-- Botón de Play -->
+<div class="d-flex justify-content-center mt-3" id="tutorial-button">
+  <button (click)="startTutorial()" class="btn btn-dark me-3 shadow-lg custom-hover-btn">
+    <i class="bi bi-play-fill me-1"></i>
+  </button>
+</div>
+
+<!-- Mensajes del Tutorial -->
+<div *ngIf="tutorialStep" class="tutorial-message">
+  <p>{{ tutorialMessages[tutorialStep - 1] }}</p>
+</div>
